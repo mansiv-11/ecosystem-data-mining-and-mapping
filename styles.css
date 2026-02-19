@@ -1,0 +1,147 @@
+/* Existing styles for cards and other elements */
+.card {
+    border: 1px solid #c0d3bb;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    cursor: pointer; /* Indicates the card is clickable */
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    background-image: url('generic_image.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 100%;
+}
+
+.card-logo {
+    max-width: 100px;
+    margin-top: -50px;
+    z-index: 10;
+}
+
+.card-body {
+    padding: 10px;
+    flex-grow: 1;
+    width: 100%;
+    overflow: auto; /* Makes content scrollable if it overflows */
+    height: 220px;
+}
+
+.card-title {
+    color: white; /* Changed for better visibility on possible dark backgrounds */
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card-text {
+    color: #333;
+    text-align: center;
+}
+
+.card-footer {
+    background-color: #faf2df;
+    padding: 10px 15px;
+    border-top: 1px solid #c0d3bb;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #83c5be;
+    border-color: #83c5be;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #e0f3fe;
+    border-color: #e0f3fe;
+    color: #333;
+}
+
+.card-type {
+    background-color: #e0f3fe; /* Blue background */
+    color: #006d77;            /* White text */
+    text-align: center;
+    text-transform: uppercase;
+    padding: 3px 3px;
+    border-radius: 10px;
+    font-weight: bold;
+    display: inline-block;
+    width: 70%;               /* Adjust width as necessary */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    margin: 25px auto 0 auto;
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin: 10px 0;
+    }
+}
+
+/* Additional styles for background image and overlay text */
+.opportunity {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.title {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+    padding: 10px;
+}
+
+.details, .actions, .comments {
+    margin-top: 20px;
+}
+
+/* New general styles for body, container, and interactive elements */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.general-info p, .actions button, textarea {
+    margin: 10px 0;
+}
+
+.actions button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+}

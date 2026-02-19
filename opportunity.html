@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>{{ opportunity.title }}</title>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ opportunity.title }}</h1>
+        <div class="general-info">
+            <p><strong>Category of Funding Activity:</strong> {{ opportunity.category }}</p>
+            <p><strong>Estimated Total Program Funding:</strong> ${{ opportunity.funding_amount }}</p>
+            <p><strong>Expected Number of Awards:</strong> {{ opportunity.awards }}</p>
+            <p><strong>Funding Instrument Type:</strong> {{ opportunity.funding_type }}</p>
+            <p><strong>Close Date:</strong> {{ opportunity.close_date }}</p>
+        </div>
+        <h2>Description</h2>
+        <p>{{ opportunity.description }}</p>
+        <div class="actions">
+            <button onclick="location.href='{{ opportunity.apply_link }}';">Apply</button>
+            <button onclick="window.location='{{ opportunity.save_link }}';">Save</button>
+        </div>
+        <h2>Comments</h2>
+        <textarea placeholder="Write your comment here..."></textarea>
+        <button>Submit</button>
+    </div>
+</body>
+</html>
